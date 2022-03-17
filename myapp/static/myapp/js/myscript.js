@@ -30,9 +30,11 @@ $('.plus-cart').click(function(){
   type: "GET",
   url: "/pluscart",
   data: {
-    prod_id: id
+    prod_id:id
   },
   success: function(data){
+      console.log(data)
+      console.log("success")
       eml.innerText = data.quantity
       document.getElementById("amount").innerText = data.amount
       document.getElementById("totalamount").innerText = data.totalamount
